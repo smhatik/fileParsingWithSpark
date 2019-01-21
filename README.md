@@ -1,9 +1,9 @@
-#FILE PARSING WITH SPARK
-####Purpose/Objective Summary: 
+# FILE PARSING WITH SPARK
+#### Purpose/Objective Summary: 
          Determining the user data(for using another application) based on user specific information which comes from API end-point(file). 
          And finally store it into MongoDB(collection name is 'userInfo'). This is a POC project for parsing a file with efficent way.
 
-####Technology Used:
+#### Technology Used:
          
        1. Spring Boot 2.0.1.RELEASE (For creating Rest API End-Point)
        2. JDK 1.8
@@ -13,7 +13,7 @@
        6. MongoDB 3.4
        7. Tomcat 7
 
-####Installation Process For Linux Machine:
+#### Installation Process For Linux Machine:
 
        1. JDK install:
              
@@ -56,7 +56,7 @@
             
             No need to install tomcat manually because here using spring boot embeded tomcat server.
 
-####Need to follow Step by Step
+#### Need to follow Step by Step
 
    Need to Start Everything UP:
    
@@ -188,7 +188,7 @@
 
        3. Then go to the browser and type http://localhost:8080/swagger-ui.html
 
-####API Sample:
+#### API Sample:
 
    Add modelName, filePathUrl to Kafka Producer:
 
