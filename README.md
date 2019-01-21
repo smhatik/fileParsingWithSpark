@@ -1,8 +1,9 @@
-Purpose/Objective Summary: 
+#FILE PARSING WITH SPARK
+####Purpose/Objective Summary: 
          Determining the user data(for using another application) based on user specific information which comes from API end-point(file). 
          And finally store it into MongoDB(collection name is 'userInfo'). This is a POC project for parsing a file with efficent way.
 
-Technology Used:
+####Technology Used:
          
        1. Spring Boot 2.0.1.RELEASE (For creating Rest API End-Point)
        2. JDK 1.8
@@ -12,7 +13,7 @@ Technology Used:
        6. MongoDB 3.4
        7. Tomcat 7
 
-Installation Process For Linux Machine:
+####Installation Process For Linux Machine:
 
        1. JDK install:
              
@@ -55,10 +56,10 @@ Installation Process For Linux Machine:
             
             No need to install tomcat manually because here using spring boot embeded tomcat server.
 
-Need to follow Step by Step:
+####Need to follow Step by Step
 
    Need to Start Everything UP:
-
+   
        1. Need to start MongoDB command is - "sudo service mongod start"
        2. Log in as root
        3. Go to the kafka directory. Command is - "cd /usr/kafka"
@@ -75,6 +76,7 @@ Need to follow Step by Step:
 
        Need to create a collection name is 'parsingRegex'. Actually file parsing depends on this regex document. So please add below document for example - 
 
+```json
 { 
     "modelName" : "testExample", 
     "regex" : "(?s)200~.*?(?=(200~)|$(?!(200~)))", 
@@ -174,6 +176,7 @@ Need to follow Step by Step:
         ]
     }
 }
+```
 
 
     Project Run:
@@ -185,7 +188,7 @@ Need to follow Step by Step:
 
        3. Then go to the browser and type http://localhost:8080/swagger-ui.html
 
-API Sample:
+####API Sample:
 
    Add modelName, filePathUrl to Kafka Producer:
 
@@ -195,9 +198,9 @@ API Sample:
               "message": "Message sent to the Kafka 'path' Topic Successfully." 
             }
 
-   ***Here modelName would be a similar with parsingRegex collections modelName. And filePathUrl would be the whole path url 
-      of the file which you want to purse. I have given a sample file attach with this project name is 'testData' under 
-      fileparsingwithspark/sampleData directory.
+   ***Here modelName would be a similar with parsingRegex collections modelName. 
+   And filePathUrl would be the whole path url of the file which you want to purse. 
+   I have given a sample file attach with this project name is 'testData' under fileparsingwithspark/sampleData directory.
 
 Hopefully it will be helpful for understanding. If there's anything you need help with, don't hesitate to contact me. 
 
